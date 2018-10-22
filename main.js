@@ -149,13 +149,24 @@ function cardSelected (event) {
       // (use string interpolation to show which player you're addressing)
       (playerOne.score > playerTwo.score) ? message.textContent = `${playerOne.name}, you won!!! Congratulations!` : 
       `${playerTwo.name}, you won!!! Congratulations!`;
+
+      for(let card of cardElements){
+        card.classList.toggle('unclickable');
+      }
     }else{
       // Step 7c - Tell the players that the game has ended in a tie
       message.textContent = "The game was a tie! Nice try!";
     }
-  }else if (playerOne.score == 14 || playerTwo.score == 14){
-    (playerOne.score > playerTwo.score) ? message.textContent = `${playerOne.name}, you won!!! Congratulations!` : 
-      `${playerTwo.name}, you won!!! Congratulations!`;
+  }else if (playerOne.score == 14){
+    message.textContent = `${playerOne.name}, you won!!! Congratulations!`;
+    for(let card of cardElements){
+      card.classList.toggle('unclickable');
+    }
+  }else if (playerTwo.score == 14){
+    message.textContent = `${playerTwo.name}, you won!!! Congratulations!`;
+    for(let card of cardElements){
+      card.classList.toggle('unclickable');
+    }
   }
 }
 
@@ -184,6 +195,10 @@ reset.addEventListener('click', function(event){
       if(card.classList.contains('flipped')){
         card.classList.toggle('flipped');
         card.classList.toggle('card');
+      }
+      
+      if(card.classList.contains('unclickable')){
+        card.classList.toggle('unclickable');
       }
     }
 
