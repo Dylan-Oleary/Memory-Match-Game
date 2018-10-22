@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Streamster'; /*a name to be used later*/
-    src: url('fonts/Streamster.ttf'); /*URL to font*/
+    font-family: 'Streamster';
+    src: url('fonts/Streamster.ttf');
 }
 
 @font-face {
-    font-family: 'Airstrike'; /*a name to be used later*/
-    src: url('fonts/Airstrikehalf.ttf'); /*URL to font*/
+    font-family: 'Airstrike';
+    src: url('fonts/Airstrikehalf.ttf');
 }
 
 html {
@@ -119,8 +119,6 @@ body {
     padding-top:10px;
     pointer-events: none;
 }
-
-/* Step 6 - Add 5 more style changes... */
 
 h1{
     font-family: 'Airstrike';
