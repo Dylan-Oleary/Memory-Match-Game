@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Streamster'; /*a name to be used later*/
+    src: url('fonts/Streamster.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Airstrike'; /*a name to be used later*/
+    src: url('fonts/Airstrikehalf.ttf'); /*URL to font*/
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     background: url('images/jediroller.jpg');
+     background-size: cover;
+     overflow: hidden;
+}
+  
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* Step 1 - Add a nice background */
+body {
+max-height: 100%;
+min-width: 100%;
+padding: 15px;
+}
+
+.container{
+background-color: pink;
+height: 1000px;
+width:100%;
+background-color: transparent;
+}
+
+/* Step 2 - Add a nice card style */
+.card {
+    height: 100px;
+    width: 65px;
+    background-color: #00FEFF;
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    font-size: 0;
+    border-radius: 5px;
+    background-image: url('images/low-contrast-linen.png');
+}
+
+/* Step 3 - Add a nice hover effect */
+.card:hover {
+    background: url('images/hovergirl.png');
+    background-size: cover;
+    box-shadow: 0 0 20px 5px #9ecaed;
+
+}
+
+/* Step 4 (+4 points) - Write a style for a flipped card */
+.flipped {
+    height: 100px;
+    width: 65px;
+    background-color: white;
+    pointer-events: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-family: 'Streamster';
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Step 5 - Add a nice style to the message element */
+#message {
+    font-family: 'Airstrike';
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    padding-bottom: 10px;
+    pointer-events: none;
+
+}
+
+#gameboard{
+    width: 100%;
+    height: 80%;
+    background-color:transparent;
+}
+
+#cards{
+    height: 60%;
+    width: 80%;
+    padding-top: 1%;
+    padding-left:10px;
+    margin-left: 10%;
+    display: -webkit-inline-flex;
+    flex-wrap: wrap;
+    background-color: rgb(163,52,168, 0.99);
+    background-image: url('images/little-pluses.png');
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 12px 8px #9ecaed;
+}
+
+#score{
+    width:80%;
+    height:8%;
+    margin-left: 10%;
+    border-color: pink;
+    color: white;
+    font-family: 'Airstrike';
+    text-align: center;
+    font-size: 42px;
+    padding-top:10px;
+    pointer-events: none;
+}
+
+/* Step 6 - Add 5 more style changes... */
+/* 1) */
+h1{
+    font-family: 'Airstrike';
+    color: #ef02eb;
+    text-align: center;
+    font-size: 42px;
+}
+/* 2) */
+.wrong{
+font-family: 'Airstrike';
+color: red;
+text-align: center;
+font-size: 42px;
+}
+
+.right{
+font-family: 'Airstrike';
+color: green;
+text-align: center;
+font-size: 42px;    
+}
+
+/* 3) */
+#reset{
+    color: white;
+    font-family: 'Airstrike';
+    border: rgb(219,162,248);
+    border-style: solid;
+    font-size: 42px;
+    text-align: center;
+    width:25%;
+    border-radius: 5px;
+    margin-left: 523px;
+    margin-top:5px;
+    background-color:rgb(22,3,35);
+
+}
+
+#reset:hover{
+   background-color: rgb(163,52,168, 0.99);
+   background-image: url('images/little-pluses.png');
+   color:#00FEFF;
+   box-shadow: 0 0 12px 4px #9ecaed;
+
+}
+/* 4) */
+.unclickable{
+    pointer-events: none;
+}
+/* 5) */
